@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Tamil Nadu destinations and plan a sample trip with the Smart Tourism Portal.">
+  <title>AI Smart Tourism | Tamil Nadu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Smart Tourism home"><span class="brand-mark">✦</span> Smart Tourism</a>
+    <nav><a href="#explore">Explore</a><a href="#planner">Trip Planner</a><a href="#assistant">Travel Assistant</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">DISCOVER TAMIL NADU</p>
+        <h1>Your next journey,<br><span>planned smarter.</span></h1>
+        <p class="hero-text">Explore hill stations, heritage sites, temples, and coastal destinations. Build a simple trip plan around your interests and budget.</p>
+        <a class="primary-btn" href="#planner">Plan my trip <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a mountain, sun and travel route" role="img">
+        <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="route-line">〰</div><div class="location-pin">✦</div>
+        <div class="art-label">Explore • Experience • Remember</div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="section-heading">
+        <div><p class="eyebrow">FIND YOUR PLACE</p><h2>Explore destinations</h2></div>
+        <span class="count" id="result-count">6 destinations</span>
+      </div>
+      <div class="filters">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search places or districts..." aria-label="Search destinations"></label>
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All categories</option><option value="Hill Station">Hill stations</option>
+          <option value="Heritage">Heritage</option><option value="Temple">Temples</option>
+          <option value="Coastal">Coastal</option><option value="Nature">Nature</option>
+        </select>
+      </div>
+      <div class="destination-grid" id="destination-grid"></div>
+      <p class="small-note">Sample directory for demonstration. Check current official information before travelling.</p>
+    </section>
+
+    <section class="section planner-section" id="planner">
+      <div class="section-heading"><div><p class="eyebrow">MAKE IT YOURS</p><h2>Smart trip planner</h2></div></div>
+      <div class="planner-card">
+        <div class="planner-form">
+          <label>Starting location<input id="start-location" type="text" value="Chennai" placeholder="e.g. Chennai"></label>
+          <label>Trip duration<select id="trip-days"><option value="1">1 day</option><option value="2" selected>2 days</option><option value="3">3 days</option><option value="4">4 days</option><option value="5">5 days</option></select></label>
+          <label>Budget (₹)<input id="budget" type="number" min="500" step="500" value="5000"></label>
+          <label>Interest<select id="trip-interest"><option value="Any">Any experience</option><option>Hill Station</option><option>Heritage</option><option>Temple</option><option>Coastal</option><option>Nature</option></select></label>
+          <button class="primary-btn" id="generate-plan">Generate trip idea →</button>
+        </div>
+        <div class="plan-output" id="plan-output" aria-live="polite">
+          <div class="output-icon">✧</div><h3>Your itinerary will appear here</h3><p>Choose your preferences and generate a sample plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section assistant-section" id="assistant">
+      <div class="section-heading"><div><p class="eyebrow">ASK A TRAVEL QUESTION</p><h2>Tourism assistant</h2></div></div>
+      <div class="chat-card">
+        <div class="chat-header"><div class="assistant-avatar">✦</div><div><strong>TN Travel Assistant</strong><p>Local demo assistant · Not connected to a live AI service</p></div><span class="online-dot"></span></div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite"><div class="message bot-message">Vanakkam! Ask me about hill stations, temples, beaches, heritage places, or trip planning in Tamil Nadu.</div></div>
+        <form id="chat-form" class="chat-form"><input id="chat-input" type="text" placeholder="Ask about Tamil Nadu tourism..." aria-label="Your travel question" required><button type="submit" aria-label="Send message">➤</button></form>
+        <div class="suggestions"><button data-question="Suggest hill stations">Hill stations</button><button data-question="Tell me about heritage places">Heritage</button><button data-question="How do I plan a budget trip?">Budget tips</button></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">✦</span> Smart Tourism</a><p>Student project prototype · AI-assisted tourism concept</p><p>Always verify live travel details from official sources.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
